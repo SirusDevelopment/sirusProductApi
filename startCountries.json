@@ -1,5 +1,5 @@
 {
-  "startCountries": "[{
+  "startCountries": '[{
     "countryName": "Thailand",
     "countryCode": "TH",
   },
@@ -19,5 +19,5 @@
       "countryName": "China",
       "countryCode": "CN",
     },
-  ]"
+  ]'
 }
