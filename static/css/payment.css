@@ -1,0 +1,223 @@
+/* default */
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Arapey&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+:root {
+  --dark-svg-color: invert(100%) sepia(0%) saturate(0%) hue-rotate(357deg) brightness(102%) contrast(102%);
+  --dark-bg: linear-gradient(to right bottom, #ffffff, #0c0c0c 30% );
+  --dark-menu-bg: linear-gradient(to right bottom, #ffffff, #0c0c0c 50% );
+  --slider-bg: linear-gradient(#ffffff00, #0c0c0cbe 80% );
+  --p-bg: linear-gradient(#ffffff00, #0c0c0cbe 70% );
+  --dark-text-color: #dadada;
+  --dark-border-color: #dadada25;
+  --dark-btn-border-color: #dadada;
+  --dark-l-text-color: #000;
+  --dark-bg-color: #ffffff15;
+  --dark-b-bg: #000000ad;
+  --dark-bg-links-color: #ffffff05;
+  --h-dark-bg-links-color: #ffffff15;
+  --dark-ca-bg-color: #ffffff;
+  --dark-ca-text-color: #000;
+  --d-text: #dadada98;
+  --bg-btn: #00000000;
+  --h-bg-btn: #ffffff43;
+  --load-bg: #000000c3;
+  --o-bg: #141414a1;
+  --d-bg: #111111c7;
+  --a-bg: #131313;
+  --title-color: #141414;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+body {
+  all: unset;
+}
+
+body {
+  width: 100vw;
+  font-family: 'Arapey', serif;
+  font-size: 16.5px;
+  color: var(--dark-text-color);
+  background-image: var(--dark-bg);
+  background-repeat: no-repeat;
+}
+
+header .menu-con p {
+  font-size: 15px;
+}
+
+.svg-icons {
+  filter: var(--dark-svg-color);
+  width: 25px;
+}
+
+a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100px;
+}
+
+button, .cart-con a, .cart-img-con {
+  display: flex;
+  background: none;
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+}
+
+.full-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+/* end of default */
+
+
+/* header */
+header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 11.5vh;
+  width: 100vw;
+  z-index: 2;
+  color: var(--title-color);
+  font-size: 20px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+}
+
+.payment-amount-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-amount-con p:first-child {
+  font-size: 15px;
+}
+/* end of header */
+
+
+/* pay-method-btns-con */
+.p-btn {
+  display: flex;
+  justify-content: center;
+  color: var(--dark-text-color);
+  width: 100%;
+  height: 100%;
+  border-radius: .25rem;
+  transition: border .5s ease-in;
+}
+
+.p-btn:hover, .p-btn:focus, .p-btn:active {
+  border: solid 1.5px var(--dark-border-color);
+  transition: border .5s ease-in;
+}
+
+.pay-method-btns-con>div {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+
+.pay-method-btns-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: space-around;
+  width: 100%;
+  height: 150px;
+}
+/* end of pay-method-btns-con */
+
+/* addresses con */
+.p-addresses-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.p-address-con p {
+  margin: 5px 0;
+  font-size: 17.5px;
+  text-align: center;
+  width: 100%;
+}
+
+.p-address-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  border: solid 1.5px var(--dark-border-color);
+  border-radius: .25rem;
+  margin: 10px 0;
+  background-color: var(--a-bg);
+}
+
+.radio-btn {
+  width: 25px;
+  height: 25px;
+  border: solid var(--dark-border-color) 2.5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cb {
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border-radius: 50%;
+  background-color: var(--dark-border-color);
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.radio-btn input {
+  display: none;
+}
+
+.radio-btn input:checked + .cb {
+  display: inline-block;
+  opacity: 1;
+}
+
+
+.p-address-info-con {
+  display: flex;
+  width: 100%;
+}
+
+.p-address-info-con>label {
+  width: 100%;
+}
+
+.a-radio-btns-con {
+  width: 10%;
+}
+/* end of addresses con */

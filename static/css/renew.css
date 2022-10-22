@@ -1,0 +1,240 @@
+/* default */
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Arapey&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap");
+
+:root {
+  --dark-svg-color: invert(100%) sepia(0%) saturate(0%) hue-rotate(357deg)
+    brightness(102%) contrast(102%);
+  --dark-bg: linear-gradient(to right bottom, #ffffff, #0c0c0c 30%);
+  --dark-text-color: #dadada;
+  --dark-input-color: #fff;
+  --dark-border-color: #dadada25;
+  --dark-inp-border-color: #dadada;
+  --h-bg-btn: #ffffff43;
+  --bg-btn: #00000000;
+  --timer-color: #000;
+  --timer-bg: #ffffff;
+  --load-bg: #000000c3;
+  --lls-bg: #212121ac;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+body {
+  all: unset;
+}
+
+body {
+  width: 100vw;
+  font-family: "Arapey", serif;
+  font-size: 16.5px;
+  color: var(--dark-text-color);
+  background-image: var(--dark-bg);
+  background-repeat: no-repeat;
+}
+
+header .menu-con p {
+  font-size: 15px;
+}
+
+.svg-icons {
+  filter: var(--dark-svg-color);
+  width: 25px;
+}
+
+a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100px;
+}
+
+button,
+.cart-con a,
+.cart-img-con {
+  display: flex;
+  background: none;
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+}
+
+.full-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.load-con {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  background-color: var(--load-bg);
+}
+
+.load-img {
+  filter: var(--dark-svg-color);
+  animation: loading 1s infinite;
+  width: 50px;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* end of default */
+
+/* load con */
+.load-con {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--load-bg);
+}
+
+.load-img {
+  filter: var(--dark-svg-color);
+  animation: loading 1s infinite;
+  width: 50px;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* end of load con */
+
+/* verify */
+.info-text-con {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 18px;
+}
+
+.timer {
+  border: solid 1.5px var(--dark-border-color);
+  border-radius: 1000px;
+  padding: 0 10px;
+  background-color: var(--timer-bg);
+  color: var(--timer-color);
+}
+
+.r-inp-con {
+  position: relative;
+  width: auto;
+  margin: 25px 0;
+}
+
+.r-inp-con > label {
+  position: absolute;
+  top: 25%;
+  left: 10px;
+  transition: all 0.25s ease-in-out;
+  z-index: 2;
+  padding: 0 10px;
+}
+
+.r-inp {
+  width: 70vw;
+  height: 40px;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: solid 1.5px var(--dark-inp-border-color);
+  color: var(--dark-text-color);
+  font-family: "Arapey", serif;
+  font-size: 18px;
+}
+
+.r-inp:focus ~ label,
+.r-inp:not(:placeholder-shown).r-inp:not(:focus) ~ label {
+  top: -20%;
+  font-size: 10px;
+}
+
+.r-inp:hover {
+  border: none;
+  border-bottom: solid 1.5px var(--dark-border-color);
+}
+
+.btn-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  width: 100%;
+}
+
+button {
+  width: 35%;
+  font-family: "Dongle", sans-serif;
+  font-size: 20px;
+  border: solid var(--dark-border-color);
+  color: var(--dark-text-color);
+  background-color: var(--lls-bg);
+  border-radius: 1000px;
+  transition: background-color 0.5s ease-in;
+  margin: 10px 0;
+}
+
+button:hover,
+button:focus,
+button:active {
+  background-color: var(--h-bg-btn);
+  transition: background-color 0.5s ease-in;
+}
+
+/* end of verify */
+
+@media (min-width: 961px) {
+  .full-con > div {
+    width: 40%;
+  }
+}
