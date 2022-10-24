@@ -117,10 +117,6 @@ p {
   padding: 10px 0;
 }
 
-.results-con {
-  width: 100%;
-}
-
 .item-con {
   display: flex;
   width: 50%;
@@ -177,33 +173,31 @@ header > div {
   font-family: "Dongle", sans-serif;
 }
 
-.results-con {
+#results-con {
   display: none;
-  justify-content: start;
   flex-direction: column;
-  top: 60px;
-  background-color: #070707f5;
-  position: absolute;
+  align-items: center;
   width: 100%;
-  height: auto;
-  z-index: 10;
+  height: 100vh;
+  position: absolute;
   overflow: auto;
+  background: #000000e0;
+  z-index: 95;
+  top: 75px;
 }
 
-.results-con > p {
-  list-style: none;
-  margin: 10px 20px;
-  font-family: "Dongle", sans-serif;
-  font-size: 22px;
-  border-bottom: solid 1.5px #25252550;
-  border-radius: 0.15rem;
-  transition: 0.5s ease-in-out;
+#results-con::-webkit-scrollbar {
+  width: 7.5px;
 }
 
-.results-con > p:focus,
-.results-con > p:hover {
-  color: #505050;
-  transition: 0.5s ease-in-out;
+#results-con::-webkit-scrollbar-track {
+  background: #00000000;
+}
+
+#results-con::-webkit-scrollbar-thumb {
+  border-radius: 1000px;
+  width: 25%;
+  background: #757575;
 }
 
 #search::placeholder {

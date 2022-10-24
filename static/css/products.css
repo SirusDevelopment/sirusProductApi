@@ -133,35 +133,6 @@ header {
   position: relative;
 }
 
-.results-con {
-  display: none;
-  justify-content: start;
-  flex-direction: column;
-  top: 60px;
-  background-color: #070707f5;
-  position: absolute;
-  width: 100%;
-  height: auto;
-  z-index: 10;
-  overflow: auto;
-}
-
-.results-con > p {
-  list-style: none;
-  margin: 10px 20px;
-  font-family: "Dongle", sans-serif;
-  font-size: 22px;
-  border-bottom: solid 1.5px #25252550;
-  border-radius: 0.15rem;
-  transition: 0.5s ease-in-out;
-}
-
-.results-con > p:focus,
-.results-con > p:hover {
-  color: #505050;
-  transition: 0.5s ease-in-out;
-}
-
 #search {
   display: none;
   border: none;
@@ -224,82 +195,127 @@ header {
 }
 /* end of cart con */
 
-/* countries-con */
-.cnt-close-con {
-  display: flex;
-  justify-content: end;
-  margin: 0;
+#results-con {
+  display: none;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  z-index: 1;
+  height: 100vh;
   position: absolute;
+  overflow: auto;
+  background: #000000e0;
+  z-index: 95;
+  top: 75px;
+}
+
+#results-con::-webkit-scrollbar {
+  width: 7.5px;
+}
+
+#results-con::-webkit-scrollbar-track {
+  background: #00000000;
+}
+
+#results-con::-webkit-scrollbar-thumb {
+  border-radius: 1000px;
+  width: 25%;
+  background: #757575;
 }
 
 .countries-con {
   display: none;
+  width: 100%;
+  height: 100%;
   position: fixed;
-  border: solid 1.5px var(--dark-border-color);
-  justify-content: center;
-  background-color: #050505;
-  z-index: 25;
   top: 0;
-  left: 0;
+  z-index: 100;
+  background: #000;
 }
 
-#usr-country-txt {
-  margin: 20px 5px;
-}
-
-.srch-countries-con {
+.countries-display-con {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  border-bottom: solid 1.5px var(--dark-border-color);
-  margin-top: 20px;
 }
 
-#srch-countries {
-  outline: none;
-  margin: 10px 5px;
-  border: none;
-  border-bottom: solid 1.5px var(--dark-input-color);
-  border-radius: 0.15rem;
-  background: none;
-  outline: none;
-  width: 45%;
-  color: var(--dark-input-color);
-  text-align: center;
-  font-size: 25px;
-  font-family: "Dongle", sans-serif;
-}
-
-.countries-results-con {
+.countries-display-con > div:first-child {
   display: flex;
   justify-content: start;
   align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  overflow: auto;
-}
-
-.countries-results-con > p {
-  margin: 0;
-  font-size: 17.5px;
-  font-family: "Dongle", sans-serif;
-  font-size: 22px;
-  border-bottom: solid 1.5px #25252550;
-  border-radius: 0.15rem;
-  transition: 0.5s ease-in-out;
   width: 100%;
-  text-align: center;
-  cursor: pointer;
 }
 
-.countries-results-con > p:focus,
-.countries-results-con > p:hover {
-  color: #505050;
+.countries-display-con > div:last-child {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  font-family: "Dongle", sans-serif;
+  font-size: 23px;
+}
+
+.countries-content {
+  position: relative;
+}
+
+#countries-load {
+  display: none;
+  background: #000000c7;
+}
+
+#choice-country {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  font-family: "Dongle", sans-serif;
+  font-size: 27.5px;
+}
+
+.countries {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 80vh;
+  overflow: auto;
+  margin: 20px 0;
+}
+
+.countries::-webkit-scrollbar {
+  width: 7.5px;
+}
+
+.countries::-webkit-scrollbar-track {
+  background: #00000000;
+}
+
+.countries::-webkit-scrollbar-thumb {
+  border-radius: 1000px;
+  width: 25%;
+  background: #757575;
+}
+
+.country {
+  display: flex;
+  justify-content: center;
+  border: solid purple;
+  width: 95%;
+}
+
+.country {
+  border: solid 1.5px #dadada25;
+  font-family: "Dongle", sans-serif;
+  font-size: 20px;
+  color: #dadada;
+  background-color: #2c2c2cc7;
+  margin: 5px 0;
   transition: 0.5s ease-in-out;
 }
-/* end of countries-con */
+
+.country:focus,
+.country:hover {
+  background-color: #00000000;
+  transition: background-color 0.5s ease-in-out;
+}
 
 /* menu */
 .menu-con {
