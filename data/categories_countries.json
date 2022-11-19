@@ -2711,12 +2711,10 @@
     "1O4S26YQ9FNAHT5": { "countryName": "Zimbabwe", "binaryCode": "ZW" }
   },
   "startCountries": [
-    [
       { "countryName": "Thailand", "countryCode": "TH" },
       { "countryName": "United States", "countryCode": "US" },
       { "countryName": "Germany", "countryCode": "DE" },
       { "countryName": "Indonesia", "countryCode": "ID" },
-      { "countryName": "China", "countryCode": "CN" }
-    ]
+      { "countryName": "China", "countryCode": "CN" },
   ]
 }
