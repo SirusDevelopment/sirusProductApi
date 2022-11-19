@@ -2715,6 +2715,6 @@
       { "countryName": "United States", "countryCode": "US" },
       { "countryName": "Germany", "countryCode": "DE" },
       { "countryName": "Indonesia", "countryCode": "ID" },
-      { "countryName": "China", "countryCode": "CN" },
+      { "countryName": "China", "countryCode": "CN" }
   ]
 }
