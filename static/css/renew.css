@@ -234,7 +234,17 @@ button:active {
 /* end of verify */
 
 @media (min-width: 961px) {
-  .full-con > div {
-    width: 40%;
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .full-con {
+    width: 40vw;
+  }
+
+  .full-con > div,
+  .r-inp {
+    width: 100%;
   }
 }
